@@ -30,13 +30,11 @@ public class Dictionary_Sorting_Algorithm {
                 System.out.print("\t\t" + temp.get(0).Num +"done\t\t");
                 continue;
             }
-            String si = String.valueOf(ca[i]);
             if (Nue==0) {
 
                 System.out.println();
                 temp.set(0, Mroot.get(0));
                 prev.set(0, Mroot.get(0));
-//                System.out.print(si);
 
                 Nue =1;
 
@@ -52,7 +50,6 @@ public class Dictionary_Sorting_Algorithm {
             if (i == aLen-1){
 
                 temp.get(0).Num += 1;
-                System.out.print("\t\t" + temp.get(0).Num +"done\t\t");
 
             }
 
@@ -63,11 +60,7 @@ public class Dictionary_Sorting_Algorithm {
         empty.add("");
         recCall(Mroot,empty);
 
-
-        for(String s: sorted_ArrayList)
-            System.out.println(s);
-
-        return null;
+        return sorted_ArrayList;
     }
 
     public void recCall(ArrayList<MSet> current, ArrayList<String> sp){
