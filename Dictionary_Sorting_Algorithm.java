@@ -27,12 +27,11 @@ public class Dictionary_Sorting_Algorithm {
             if (ca[i] == ' '){
                 Nue=0;
                 temp.get(0).Num += 1;
-                System.out.print("\t\t" + temp.get(0).Num +"done\t\t");
                 continue;
             }
+            String si = String.valueOf(ca[i]);
             if (Nue==0) {
 
-                System.out.println();
                 temp.set(0, Mroot.get(0));
                 prev.set(0, Mroot.get(0));
 
@@ -46,7 +45,6 @@ public class Dictionary_Sorting_Algorithm {
             prev.set(0, temp.get(0));
             temp.set(0, prev.get(0).now.get(si));
 
-            System.out.print(si + "\t\t" );
             if (i == aLen-1){
 
                 temp.get(0).Num += 1;
@@ -59,6 +57,8 @@ public class Dictionary_Sorting_Algorithm {
         ArrayList<String> empty =new ArrayList<>();
         empty.add("");
         recCall(Mroot,empty);
+
+
 
         return sorted_ArrayList;
     }
